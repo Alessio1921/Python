@@ -19,7 +19,9 @@ print('Funzione cerca parole Palindrome')
 def serchPalindrome(wordTemp):
   reverseWord = wordTemp[::-1]
   answer = ""
-  if reverseWord == wordTemp:
+  if wordTemp.isnumeric():
+    answer = "Non hai inserito una parola"
+  elif reverseWord == wordTemp:
     answer = "La parola inserita è palindroma!"
   else:
     answer = "La parola inserita non è palindroma!"
